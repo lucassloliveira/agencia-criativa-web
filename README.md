@@ -4,12 +4,6 @@ Site institucional de uma agência de design digital fictícia, desenvolvido com
 
 ---
 
-## 🖥️ Preview
-
-![Preview do projeto](assets/preview.png)
-
----
-
 ## 📋 Sobre o projeto
 
 A **Agência Criativa Web** é um site institucional completo com design moderno, elegante e totalmente responsivo. O projeto foi desenvolvido do zero, aplicando conceitos fundamentais de desenvolvimento front-end.
