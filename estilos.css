@@ -1,3 +1,6 @@
+/* ===================
+   VARIÁVEIS
+=================== */
 :root {
     --cor-primaria: #1a1a1a;
     --cor-secundaria: #f5f4f0;
@@ -11,12 +14,18 @@
     --espaco-lg: 4rem;
 }
 
+/* ===================
+   RESET
+=================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ===================
+   BASE
+=================== */
 body {
     font-family: var(--fonte-corpo);
     color: var(--cor-texto);
@@ -24,6 +33,10 @@ body {
     padding-top: 5rem;
 }
 
+
+/* ===================
+   HEADER
+=================== */
 header {
     display: flex;
     align-items: center;
@@ -38,7 +51,7 @@ header {
 
 header a {
     font-family: 'DM Serif Display', serif;
-    font-size: var(--espaco-md);
+    font-size: 2rem;
     color: var(--cor-primaria);
     text-decoration: none;
 }
@@ -59,16 +72,18 @@ section {
     scroll-margin-top: 4.5rem;
 }
 
+/* ===================
+   HOME
+=================== */
 #home {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: var(--espaco-lg) var(--espaco-lg);
-    padding-top: calc(var(--espaco-lg) + 4rem);
+    padding: calc(var(--espaco-lg) + 4rem) var(--espaco-lg) var(--espaco-lg);
     background-color: var(--cor-primaria);
     gap: var(--espaco-sm);
-    min-height: 100vh;
+    min-height: 80vh;
 }
 
 #home h1 {
@@ -123,22 +138,6 @@ section {
     margin-top: var(--espaco-sm);
 }
 
-.home-numeros {
-    display: flex;
-    gap: var(--espaco-lg);
-    margin-top: var(--espaco-lg);
-    padding-top: var(--espaco-lg);
-    border-top: 1px solid rgba(245, 244, 240, 0.15);
-}
-
-.numero strong {
-    display: block;
-    font-family: var(--fonte-titulo);
-    font-size: 2.5rem;
-    color: var(--cor-secundaria);
-    line-height: 1;
-}
-
 .home-conteudo {
     flex: 1;
     display: flex;
@@ -154,6 +153,7 @@ section {
 }
 
 .home-card {
+    width: 100%;
     border: 1px solid rgba(245, 244, 240, 0.15);
     border-radius: 16px;
     padding: var(--espaco-lg);
@@ -175,13 +175,13 @@ section {
     max-width: 100%;
 }
 
-.numero span {
-    font-size: 0.9rem;
-    color: rgba(245, 244, 240, 0.6);
-    margin-top: 0.25rem;
-    display: block;
+#nav {
+    transition: all 0.3s ease;
 }
 
+/* ===================
+   SOBRE NÓS
+=================== */
 #sobre-nos {
     padding: var(--espaco-lg);
     background-color: var(--cor-secundaria);
@@ -239,6 +239,9 @@ section {
     margin-bottom: var(--espaco-sm);
 }
 
+/* ===================
+   SERVIÇOS
+=================== */
 #servicos {
     padding: var(--espaco-lg);
     background-color: var(--cor-primaria);
@@ -262,6 +265,7 @@ section {
     background-color: var(--cor-card);
     padding: var(--espaco-md);
     border-radius: 8px;
+    transition: transform 0.3s ease;
 }
 
 #servicos article h3 {
@@ -274,6 +278,14 @@ section {
     line-height: 1.7;
 }
 
+#servicos article:hover {
+    transform: translateY(-4px);
+    background-color: #333;
+}
+
+/* ===================
+   DEPOIMENTOS
+=================== */
 #depoimentos {
     padding: var(--espaco-lg);
     background-color: var(--cor-secundaria);
@@ -309,6 +321,9 @@ section {
     font-style: normal;
 }
 
+/* ===================
+   CONTATOS
+=================== */
 #contatos {
     padding: var(--espaco-lg);
     background-color: var(--cor-primaria);
@@ -377,12 +392,16 @@ section {
     background-color: #776248;
 }
 
+/* ===================
+   FOOTER
+=================== */
 footer {
     background-color: var(--cor-primaria);
     color: var(--cor-secundaria);
     text-align: center;
     padding: var(--espaco-md);
     font-size: 0.9rem;
+    border-top: 1px solid rgba(245, 244, 240, 0.1);
 }
 
 footer a {
@@ -394,6 +413,9 @@ footer a:hover {
     color: var(--cor-acento);
 }
 
+/* ===================
+   MEDIA QUERIES
+=================== */
 @media (max-width: 768px) {
     body {
         overflow-x: hidden;
@@ -417,7 +439,9 @@ footer a:hover {
     }
 
     .home-visual {
-        display: none;
+        display: flex;
+        width: 100%;
+        flex: 0 0 auto;
     }
 
     .home-numeros {
@@ -432,7 +456,8 @@ footer a:hover {
     .sobre-visual {
         flex: 0 0 auto;
         width: 100%;
-        grid-template-columns: repeat(2, 1fr);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         gap: var(--espaco-sm);
         box-sizing: border-box;
     }
@@ -443,7 +468,7 @@ footer a:hover {
 
     #home {
         padding: var(--espaco-md);
-        padding-top: 12rem;
+        padding-top: 2rem;
         flex-direction: column;
     }
 
@@ -469,5 +494,47 @@ footer a:hover {
     #sobre-nos {
         padding: var(--espaco-md);
         overflow-x: hidden;
+    }
+
+    #servicos {
+        padding: var(--espaco-md);
+    }
+
+    #depoimentos {
+        padding: var(--espaco-md);
+    }
+
+    #contatos {
+        padding: var(--espaco-md);
+    }
+
+    #contatos form {
+        max-width: 100%;
+    }
+}
+
+/* ===================
+   TABLET
+=================== */
+@media (max-width: 1024px) {
+
+    #servicos .servicos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sobre-visual {
+        flex: 0 0 45%;
+    }
+
+    #home h1 {
+        font-size: 3rem;
+    }
+
+    #home,
+    #sobre-nos,
+    #servicos,
+    #depoimentos,
+    #contatos {
+        padding: var(--espaco-md) var(--espaco-lg);
     }
 }
