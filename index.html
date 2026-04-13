@@ -9,8 +9,12 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <header>
-        <a href="#home">Agência Criativa Web</a>
+
+    <!-- ===================
+        HEADER
+    =================== -->
+    <header class="header">
+        <a href="#home" class="header__logo">Agência Criativa Web</a>
 
         <button class="hamburger" id="hamburger" aria-label="Abrir menu">
             <span></span>
@@ -19,58 +23,64 @@
         </button>
 
         <nav id="nav">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sobre-nos">Sobre nós</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#depoimentos">Depoimentos</a></li>
-                <li><a href="#contatos">Contatos</a></li>
+            <ul class="nav__lista">
+                <li><a href="#home" class="nav__link">Home</a></li>
+                <li><a href="#sobre-nos" class="nav__link">Sobre nós</a></li>
+                <li><a href="#servicos" class="nav__link">Serviços</a></li>
+                <li><a href="#depoimentos" class="nav__link">Depoimentos</a></li>
+                <li><a href="#contatos" class="nav__link">Contatos</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home">
-        <div class="home-conteudo">
-            <h1>Criamos experiências digitais que ficam na memória.</h1>
-            <p>Bem-vindo à Agência Criativa Web, onde ideias ganham vida e se transformam em experiências digitais únicas. Aqui, combinamos criatividade, tecnologia e estratégia para desenvolver soluções modernas, funcionais e visualmente impactantes. Seja para criar um site do zero, fortalecer sua presença online ou elevar a identidade da sua marca, estamos prontos para transformar seus objetivos em resultados reais. Explore nossos serviços e descubra como podemos levar seu projeto para o próximo nível.</p>
-            <div class="home-acoes">
+    <!-- ===================
+        HOME
+    =================== -->
+    <section id="home" class="home">
+        <div class="home__conteudo">
+            <h1 class="home__titulo">Criamos experiências digitais que ficam na memória.</h1>
+            <p class="home__descricao">Bem-vindo à Agência Criativa Web, onde ideias ganham vida e se transformam em experiências digitais únicas. Aqui, combinamos criatividade, tecnologia e estratégia para desenvolver soluções modernas, funcionais e visualmente impactantes. Seja para criar um site do zero, fortalecer sua presença online ou elevar a identidade da sua marca, estamos prontos para transformar seus objetivos em resultados reais. Explore nossos serviços e descubra como podemos levar seu projeto para o próximo nível.</p>
+            <div class="home__acoes">
                 <a href="#servicos">Ver serviços</a>
                 <a href="#sobre-nos">Conheça a agência</a>
             </div>
         </div>    
 
-        <div class="home-visual">
-                <div class="home-card">
+        <div class="home__visual">
+                <div class="home__card">
                     <span>✦</span>
                     <p>"Transformamos ideias em experiências digitais memoráveis."</p>
                 </div>
         </div>
     </section>
     
-    <section id="sobre-nos">
-        <div class="sobre-inner">
+    <!-- ===================
+        SOBRE NÓS
+    =================== -->
+    <section id="sobre-nos" class="sobre secao">
+        <div class="sobre__inner">
         
-            <div class="sobre-texto">
-                <h2>Sobre nós</h2>
+            <div class="sobre__texto">
+                <h2 class="secao__titulo">Sobre nós</h2>
                 <p>A Agência Criativa Web é especializada no desenvolvimento de soluções digitais que unem design moderno, performance e usabilidade. Trabalhamos com a criação de sites, landing pages e sistemas personalizados, sempre focando em oferecer experiências intuitivas e atrativas para o usuário. Nossa equipe está constantemente atualizada com as tendências do mercado, garantindo que cada projeto seja desenvolvido com as melhores práticas de tecnologia e design.</p>
                 <p>Além disso, acreditamos que cada cliente é único, por isso buscamos entender profundamente as necessidades de cada projeto para entregar resultados sob medida. Desde o planejamento até a execução, priorizamos qualidade, inovação e atenção aos detalhes, ajudando empresas e empreendedores a fortalecer sua presença online e alcançar seus objetivos com eficiência e criatividade.</p>
             </div>
 
-            <div class="sobre-visual">
-                <div class="sobre-card">
+            <div class="sobre__visual">
+                <div class="sobre__card">
                     <span>8+</span>
                     <p>Anos de experiência</p>
                 </div>
            
-                <div class="sobre-card">
+                <div class="sobre__card">
                     <span>120+</span>
                     <p>Projetos entregues</p>
                 </div>
-                <div class="sobre-card">
+                <div class="sobre__card">
                     <span>98%</span>
                     <p>Clientes satisfeitos</p>
                 </div>
-                <div class="sobre-card">
+                <div class="sobre__card">
                     <span>15+</span>
                     <p>Prêmios conquistados</p>
                 </div>
@@ -78,82 +88,96 @@
         </div>   
     </section>
     
-    <section id="servicos">
-        <h2>Serviços</h2>
-        <div class="servicos-grid">
-            <article>
-                <h3>Design Gráfico</h3>
+    <!-- ===================
+        SERVIÇOS
+    =================== -->
+    <section id="servicos" class="servicos secao secao--escura">
+        <h2 class="secao__titulo secao__titulo--centralizado">Serviços</h2>
+        <div class="servicos__grid">
+            <article class="servicos__card">
+                <h3 class="servicos__card--titulo">Design Gráfico</h3>
                 <p>Criamos peças visuais impactantes que comunicam sua marca com criatividade e profissionalismo.</p>
             </article>
 
-            <article>
-                <h3>Desenvolvimento Web</h3>
+            <article class="servicos__card">
+                <h3 class="servicos__card--titulo">Desenvolvimento Web</h3>
                 <p>Desenvolvemos sites modernos, rápidos e responsivos, focados em performance e experiência do usuário.</p>
             </article>
 
-            <article>
-                <h3>Branding</h3>
+            <article class="servicos__card">
+                <h3 class="servicos__card--titulo">Branding</h3>
                 <p>Construímos identidades de marca fortes e memoráveis que se destacam no mercado.</p>
             </article>
 
-            <article>
-                <h3>UI/UX Design</h3>
+            <article class="servicos__card">
+                <h3 class="servicos__card--titulo">UI/UX Design</h3>
                 <p>Projetamos interfaces intuitivas e agradáveis, garantindo a melhor experiência para o usuário.</p>
             </article>
 
-            <article>
-                <h3>Marketing Digital</h3>
+            <article class="servicos__card">
+                <h3 class="servicos__card--titulo">Marketing Digital</h3>
                 <p>Planejamos estratégias eficientes para aumentar sua presença online e atrair mais clientes.</p>
             </article>
 
-            <article>
-                <h3>Motion Design</h3>
+            <article class="servicos__card">
+                <h3 class="servicos__card--titulo">Motion Design</h3>
                 <p>Produzimos animações dinâmicas que dão vida à sua comunicação visual e fortalecem sua marca.</p>
             </article>
         </div>
     </section>
     
-    <section id="depoimentos">
-        <h2>Depoimentos</h2>
-        <blockquote>
-            <p>“A Agência Criativa Web superou todas as nossas expectativas! O novo site ficou moderno, rápido e alinhado com a identidade da nossa marca. Sem dúvida, foi um grande diferencial para atrair mais clientes.”</p>
-            <cite>Mariana Souza – Gerente de Marketing, NovaTech Soluções</cite>
+    <!-- ===================
+        DEPOIMENTOS
+    =================== -->
+    <section id="depoimentos" class="depoimentos secao">
+        <h2 class="secao__titulo secao__titulo--centralizado">Depoimentos</h2>
+        <blockquote class="depoimento__card">
+            <p class="depoimento__texto">“A Agência Criativa Web superou todas as nossas expectativas! O novo site ficou moderno, rápido e alinhado com a identidade da nossa marca. Sem dúvida, foi um grande diferencial para atrair mais clientes.”</p>
+            <cite class="depoimento__autor">Mariana Souza – Gerente de Marketing, NovaTech Soluções</cite>
         </blockquote>
 
-        <blockquote>
-            <p>“Profissionalismo e criatividade definem essa equipe. Desde o branding até o desenvolvimento do nosso site, tudo foi feito com muita qualidade e atenção aos detalhes. Recomendo fortemente!”</p>
-            <cite>Carlos Mendes – CEO, Mendes Consultoria Empresarial</cite>
+        <blockquote class="depoimento__card">
+            <p class="depoimento__texto">“Profissionalismo e criatividade definem essa equipe. Desde o branding até o desenvolvimento do nosso site, tudo foi feito com muita qualidade e atenção aos detalhes. Recomendo fortemente!”</p>
+            <cite class="depoimento__autor">Carlos Mendes – CEO, Mendes Consultoria Empresarial</cite>
         </blockquote>
 
-        <blockquote>
-            <p>“Trabalhar com a Agência Criativa Web foi uma experiência incrível. Eles entenderam perfeitamente nossas necessidades e entregaram soluções que realmente trouxeram resultados para o nosso negócio.”</p>
-            <cite>Juliana Ribeiro – Diretora Comercial, Horizonte Digital</cite>
+        <blockquote class="depoimento__card">
+            <p class="depoimento__texto">“Trabalhar com a Agência Criativa Web foi uma experiência incrível. Eles entenderam perfeitamente nossas necessidades e entregaram soluções que realmente trouxeram resultados para o nosso negócio.”</p>
+            <cite class="depoimento__autor">Juliana Ribeiro – Diretora Comercial, Horizonte Digital</cite>
         </blockquote>
     </section>
     
-    <section id="contatos">
-        <h2>Contatos</h2>
-        <p>Endereço: Rua das Inovações, 245 – Centro, Salvador – BA, CEP 40000-000</p>
-        <p>Telefone: (71) 98765-4321</p>
-        <p>E-mail: contato@agenciacriativaweb.com.br</p>
+    <!-- ===================
+        CONTATOS
+    =================== -->
+    <section id="contatos" class="contatos secao secao--escura">
+        <h2 class="secao__titulo secao__titulo--claro">Contatos</h2>
+            <div class="contatos__info">
+                <p>Endereço: Rua das Inovações, 245 – Centro, Salvador – BA, CEP 40000-000</p>
+                <p>Telefone: (71) 98765-4321</p>
+                <p>E-mail: contato@agenciacriativaweb.com.br</p>
+            </div>
 
-        <form>
-            <label for="nome">Seu nome</label>
-            <input type="text" id="nome" name="nome" placeholder="Ex: Maria Silva" required>
+        <form class="contatos__form">
+            <label for="nome" class="contatos__label">Seu nome</label>
+            <input type="text" id="nome" class="contatos__input" name="nome" placeholder="Ex: Maria Silva" required>
 
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" placeholder="Ex: maria@email.com" required>
+            <label for="email" class="contatos__label">E-mail</label>
+            <input type="email" id="email" class="contatos__input" name="email" placeholder="Ex: maria@email.com" required>
 
-            <label for="telefone">Telefone</label>
-            <input type="tel" id="telefone" name="telefone" placeholder="(xx) x xxxx-xxxx" required>
+            <label for="telefone" class="contatos__label">Telefone</label>
+            <input type="tel" id="telefone" class="contatos__input" name="telefone" placeholder="(xx) x xxxx-xxxx" required>
 
-            <label for="mensagem">Mensagem</label>
-            <textarea id="mensagem" name="mensagem" placeholder="Conte um pouco sobre seu projeto..." required></textarea>
+            <label for="mensagem" class="contatos__label">Mensagem</label>
+            <textarea id="mensagem" class="contatos__input" name="mensagem" placeholder="Conte um pouco sobre seu projeto..." required></textarea>
 
-            <button type="submit">Enviar</button>
+            <button type="submit" class="contatos__btn">Enviar</button>
         </form>
     </section>
 
+    <!-- ===================
+        FOOTER
+    =================== -->
     <footer>
         <p>© 2025 Agência Criativa Web. Todos os direitos reservados.</p>
         <p>Telefone: <a href="tel:+5571987654321">(71) 98765-4321</a></p>
@@ -165,13 +189,13 @@
         const nav = document.getElementById('nav');
 
         hamburger.addEventListener('click', () => {
-            nav.classList.toggle('aberto');
+            nav.classList.toggle('nav--aberta');
         });
 
         const links = document.querySelectorAll('#nav a');
         links.forEach(link => {
             link.addEventListener('click', () => {
-                nav.classList.remove('aberto');
+                nav.classList.remove('nav--aberta');
             });
         });
     </script>
