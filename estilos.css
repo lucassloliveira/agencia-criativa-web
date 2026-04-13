@@ -89,6 +89,7 @@ body {
     color: var(--cor-primaria);
     text-decoration: none;
     font-size: 1.5rem;
+    font-family: var(--fonte-titulo);
 }
 
 section {
@@ -259,6 +260,11 @@ section {
 =================== */
 .servicos {
     background-color: var(--cor-primaria);
+}
+
+.secao__titulo--claro {
+    color: var(--cor-secundaria);
+    text-align: center;
 }
 
 .servicos__grid {
