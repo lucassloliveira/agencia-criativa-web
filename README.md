@@ -36,9 +36,7 @@ A **Agência Criativa Web** é um site institucional completo com design moderno
 agencia-criativa-web/
 ├── index.html
 ├── estilos.css
-├── README.md
-└── assets/
-    └── preview.png
+└── README.md
 ```
 
 ---
