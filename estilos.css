@@ -27,7 +27,8 @@
    UTILITÁRIOS
 =================== */
 .secao {
-    padding: var(--espaco-lg);
+    scroll-margin-top: 7.5rem;
+    scroll-margin-top: 4.5rem;
 }
 
 .secao--escura {
@@ -73,10 +74,14 @@ body {
 }
 
 .header__logo {
-    font-family: 'DM Serif Display', serif;
+    font-family: var(--fonte-titulo);
     font-size: 2rem;
     color: var(--cor-primaria);
     text-decoration: none;
+}
+
+.nav {
+    transition: all 0.3s ease;
 }
 
 .nav__lista {
@@ -92,10 +97,6 @@ body {
     font-family: var(--fonte-titulo);
 }
 
-section {
-    scroll-margin-top: 4.5rem;
-}
-
 /* ===================
    HOME
 =================== */
@@ -108,6 +109,14 @@ section {
     background-color: var(--cor-primaria);
     gap: var(--espaco-sm);
     min-height: 80vh;
+    scroll-margin-top: 4.5rem;
+}
+
+.home__conteudo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-sm);
 }
 
 .home__titulo {
@@ -123,17 +132,22 @@ section {
     color: var(--cor-secundaria);
 }
 
-.home__acoes a {
+.home__acoes {
+    display: flex;
+    gap: var(--espaco-sm);
+    margin-top: var(--espaco-sm);
+}
+
+.home__acoes__btn {
     display: inline-block;
     padding: 1rem 2rem;
     border: 2px solid var(--cor-acento);
     color: var(--cor-acento);
     text-decoration: none;
     font-size: 1rem;
-    margin-top: var(--espaco-sm);
 }
 
-.home__acoes a:hover {
+.home__acoes__btn:hover {
     background-color: var(--cor-acento);
     color: var(--cor-secundaria);
 }
@@ -148,25 +162,12 @@ section {
     padding: 4px;
 }
 
-.hamburger span{
+.hamburger__linha {
     display: block;
     width: 25px;
     height: 2px;
     background-color: var(--cor-primaria);
     transition: all 0.3s ease;
-}
-
-.home__acoes {
-    display: flex;
-    gap: var(--espaco-sm);
-    margin-top: var(--espaco-sm);
-}
-
-.home__conteudo {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: var(--espaco-sm);
 }
 
 .home__visual {
@@ -184,14 +185,14 @@ section {
     text-align: center;
 }
 
-.home__card span {
+.home__card__icone {
     display: block;
     font-size: 3rem;
     color: var(--cor-acento);
     margin-bottom: var(--espaco-md);
 }
 
-.home__card p {
+.home__card__texto {
     font-family: var(--fonte-titulo);
     font-size: 1.5rem;
     color: var(--cor-secundaria);
@@ -199,18 +200,9 @@ section {
     max-width: 100%;
 }
 
-.nav {
-    transition: all 0.3s ease;
-}
-
 /* ===================
    SOBRE NÓS
 =================== */
-.sobre {
-    background-color: var(--cor-secundaria);
-    color: var(--cor-texto);
-}
-
 .sobre__inner {
     display: flex;
     gap: var(--espaco-lg);
@@ -219,6 +211,13 @@ section {
 
 .sobre__texto {
     flex: 1;
+}
+
+.sobre__texto__paragrafo {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    max-width: 700px;
+    margin-bottom: var(--espaco-sm);
 }
 
 .sobre__visual {
@@ -235,37 +234,22 @@ section {
     text-align: center;
 }
 
-.sobre__card span {
+.sobre__card__numero {
     font-family: var(--fonte-titulo);
     font-size: 2.5rem;
     color: var(--cor-acento);
     display: block;
 }
 
-.sobre__card p {
+.sobre__card__descricao {
     font-size: 0.9rem;
     color: var(--cor-secundaria);
     margin: 0;
 }
 
-.sobre__texto p {
-    font-size: 1.125rem;
-    line-height: 1.8;
-    max-width: 700px;
-    margin-bottom: var(--espaco-sm);
-}
-
 /* ===================
    SERVIÇOS
 =================== */
-.servicos {
-    background-color: var(--cor-primaria);
-}
-
-.secao__titulo--claro {
-    color: var(--cor-secundaria);
-}
-
 .servicos__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -279,12 +263,12 @@ section {
     transition: transform 0.3s ease;
 }
 
-.servicos__card--titulo {
+.servicos__card__titulo {
     color: var(--cor-secundaria);
     margin-bottom: var(--espaco-sm);
 }
 
-.servicos__card--descricao {
+.servicos__card__descricao {
     color: var(--cor-secundaria);
     line-height: 1.7;
 }
@@ -297,10 +281,6 @@ section {
 /* ===================
    DEPOIMENTOS
 =================== */
-.depoimentos {
-    padding: var(--espaco-lg);
-}
-
 .depoimento__card {
     background-color: #fff;
     padding: var(--espaco-md);
@@ -326,21 +306,17 @@ section {
 /* ===================
    CONTATOS
 =================== */
-.contatos {
-    background-color: var(--cor-primaria);
-}
-
 .secao__titulo--claro {
     color: var(--cor-secundaria);
 }
 
-.contatos__info p {
+.contatos__info__item {
     color: rgba(245, 244, 240, 0.7);
     margin-bottom: var(--espaco-sm);
     font-size: 1.125rem;
 }
 
-.contatos__info a {
+.contatos__info__link {
     color: var(--cor-acento);
     text-decoration: none;
 }
@@ -359,8 +335,7 @@ section {
     font-weight: 500;
 }
 
-.contatos__input,
-.contatos__input.contatos__input--textarea {
+.contatos__input {
     padding: 1rem;
     background: rgba(255, 255, 255, 0.07);
     border: 1px solid rgba(255, 255, 255, 0.15);
@@ -370,8 +345,7 @@ section {
     font-family: var(--fonte-corpo);
 }
 
-.contatos__input:focus,
-.contatos__input.contatos__input--textarea:focus {
+.contatos__input:focus {
     outline: none;
     border-color: var(--cor-acento);
 }
@@ -393,7 +367,7 @@ section {
 /* ===================
    FOOTER
 =================== */
-footer {
+.footer {
     background-color: var(--cor-primaria);
     color: var(--cor-secundaria);
     text-align: center;
@@ -402,44 +376,96 @@ footer {
     border-top: 1px solid rgba(245, 244, 240, 0.1);
 }
 
-footer a {
+.footer__link {
     color: var(--cor-secundaria);
     text-decoration: none;
 }
 
-footer a:hover {
+.footer__link:hover {
     color: var(--cor-acento);
 }
 
 /* ===================
-   MEDIA QUERIES
+   MEDIA QUERIES - TABLET
 =================== */
-@media (max-width: 768px) {
-    body {
-        overflow-x: hidden;
-        overflow-y: auto;
-    }
-
-    header {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        padding: var(--espaco-sm);
-    }
-
-    .nav__lista {
-        flex-direction: column;
-        gap: 0.5rem;
+@media (max-width: 1024px) {
+    .home,
+    .sobre,
+    .servicos,
+    .depoimentos,
+    .contatos {
+        padding: var(--espaco-md) var(--espaco-lg);
     }
 
     .hamburger {
         display: flex;
     }
 
+    .nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--cor-secundaria);
+        padding: var(--espaco-md);
+        border-top: 1px solid var(--cor-card);
+    }
+
+    .nav--aberta {
+        display: block;
+    }
+
+    
+    .nav__lista {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .home__titulo {
+        font-size: 3rem;
+    }
+
+    .servicos__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sobre__visual {
+        flex: 0 0 45%;
+    }
+}
+
+/* ===================
+   MEDIA QUERIES - MOBILE
+=================== */
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .secao {
+    scroll-margin-top: 7.5rem;
+}
+
+    .home {
+        flex-direction: column;
+        padding: var(--espaco-md);
+        padding-top: 4rem;
+        scroll-margin-top: 7.5rem;
+    }
+
+    .home__titulo {
+        font-size: 2.5rem;
+    }
+
     .home__visual {
-        display: flex;
         width: 100%;
         flex: 0 0 auto;
+    }
+
+    .sobre {
+        padding: var(--espaco-md);
+        overflow-x: hidden;
     }
 
     .sobre__inner {
@@ -452,45 +478,14 @@ footer a:hover {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: var(--espaco-sm);
-        box-sizing: border-box;
-    }
-
-    .servicos__grid {
-        grid-template-columns: 1fr;
-    }
-
-    .home {
-        padding: var(--espaco-md);
-        padding-top: 2rem;
-        flex-direction: column;
-    }
-
-    .home__titulo {
-        font-size: 2.5rem;
-    }
-
-    .nav {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: var(--cor-secundaria);
-        padding: var(--espaco-sm);
-        border-top: 1px solid var(--cor-card);
-    }
-
-    .nav--aberta {
-        display: block;
-    }
-
-    .sobre {
-        padding: var(--espaco-md);
-        overflow-x: hidden;
     }
 
     .servicos {
         padding: var(--espaco-md);
+    }
+
+    .servicos__grid {
+        grid-template-columns: 1fr;
     }
 
     .depoimentos {
@@ -503,31 +498,5 @@ footer a:hover {
 
     .contatos__form {
         max-width: 100%;
-    }
-}
-
-/* ===================
-   TABLET
-=================== */
-@media (max-width: 1024px) {
-
-    .servicos__grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .sobre__visual {
-        flex: 0 0 45%;
-    }
-
-    .home__titulo {
-        font-size: 3rem;
-    }
-
-    .home,
-    .sobre,
-    .servicos,
-    .depoimentos,
-    .contatos {
-        padding: var(--espaco-md) var(--espaco-lg);
     }
 }
