@@ -6,7 +6,7 @@ Site institucional de uma agência de design digital fictícia, desenvolvido com
 
 ## 📋 Sobre o projeto
 
-A **Agência Criativa Web** é um site institucional completo com design moderno, elegante e totalmente responsivo. O projeto foi desenvolvido do zero, aplicando conceitos fundamentais de desenvolvimento front-end.
+A **Agência Criativa Web** é um site institucional completo com design moderno, elegante e totalmente responsivo. O projeto foi desenvolvido do zero, aplicando conceitos fundamentais de desenvolvimento front-end, e posteriormente refatorado com **SASS** para uma arquitetura modular e escalável.
 
 ---
 
@@ -14,18 +14,24 @@ A **Agência Criativa Web** é um site institucional completo com design moderno
 
 - **HTML5** semântico
 - **CSS3** com variáveis, Flexbox e Grid
+- **SASS (SCSS)** com partials, variáveis, mixins e aninhamento
 - **JavaScript** vanilla para o menu hambúrguer
+- **Node.js** para compilação do SASS
 
 ---
 
 ## 📐 Conceitos aplicados
 
-- Design Tokens com CSS Custom Properties
-- Layout com Flexbox e CSS Grid
-- Responsividade com Media Queries (mobile, tablet e desktop)
+- Arquitetura modular com **SASS Partials** e `@use`
+- **Variáveis SASS** para cores, fontes e espaçamentos
+- **Mixins reutilizáveis** para botões e espaçamento de seções
+- **Mixin `respond()`** com mapa de breakpoints para media queries
+- **Aninhamento de seletores** com `&` seguindo a metodologia BEM
+- **Mobile-first** com `min-width` nos breakpoints
+- Metodologia **BEM** para nomeação de classes
+- Layout com **Flexbox** e **CSS Grid**
 - Menu hambúrguer com JavaScript
 - Scroll suave com `scroll-behavior` e `scroll-margin-top`
-- Tipografia fluída com `clamp()`
 - Acessibilidade com atributos `aria-label` e HTML semântico
 
 ---
@@ -35,7 +41,15 @@ A **Agência Criativa Web** é um site institucional completo com design moderno
 ```
 agencia-criativa-web/
 ├── index.html
-├── estilos.css
+├── scss/
+│   ├── estilos.scss        
+│   ├── _variaveis.scss     
+│   ├── _mixins.scss        
+│   ├── _base.scss          
+│   ├── _layout.scss        
+│   └── _componentes.scss   
+├── css/
+│   └── estilos.css         
 └── README.md
 ```
 
@@ -64,12 +78,15 @@ agencia-criativa-web/
 ---
 
 ## 📱 Responsividade
-
+O projeto adota a abordagem **mobile-first**, com breakpoints definidos como mapa de variáveis SASS e aplicados via mixin `respond()`.
+ 
 | Breakpoint | Dispositivo |
 |---|---|
-| `1024px` | Tablet landscape |
-| `768px` | Tablet portrait e mobile |
-
+| `576px` (sm) | Mobile landscape |
+| `768px` (md) | Tablet portrait |
+| `1024px` (lg) | Tablet landscape e desktop |
+| `1280px` (xl) | Desktop grande |
+ 
 ---
 
 ## ⚙️ Como rodar o projeto
@@ -78,9 +95,22 @@ agencia-criativa-web/
 ```bash
 git clone https://github.com/lucassloliveira/agencia-criativa-web.git
 ```
-
-2. Abra o arquivo `index.html` no navegador ou use a extensão **Live Server** no VS Code.
-
+2. Instale o SASS via Node.js:
+```bash
+npm install -g sass
+```
+ 
+3. Compile o SASS:
+```bash
+sass scss/estilos.scss css/estilos.css
+```
+ 
+4. Abra o arquivo `index.html` no navegador ou use a extensão **Live Server** no VS Code.
+> 💡 Para compilar automaticamente ao salvar, use o modo watch:
+> ```bash
+> sass --watch scss/estilos.scss css/estilos.css
+> ```
+ 
 ---
 
 ## 📚 Projeto de estudo
