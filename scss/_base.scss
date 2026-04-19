@@ -1,0 +1,20 @@
+@use 'variaveis' as v;
+
+/* ===================
+   RESET
+=================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===================
+   BASE
+=================== */
+body {
+    font-family: v.$fonte-corpo;
+    color: v.$cor-texto;
+    background-color: v.$cor-secundaria;
+    padding-top: 5rem;
+}

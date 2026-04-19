@@ -1,0 +1,25 @@
+@use 'variaveis' as v;
+@use 'sass:map';
+
+@mixin botao-base {
+    padding: 1rem 2rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+@mixin espacamento-secao($tamanho, $tamanho2) {
+    padding: $tamanho;
+
+    @include respond(md) {
+        padding: $tamanho, $tamanho2;
+    }
+
+    scroll-margin-top: 7.5rem;
+}
+
+//* GERA O MEDIA QUERY *//
+@mixin respond($size) {
+    @media (min-width: map.get(v.$breakpoints, $size)) {
+        @content; 
+    }
+}

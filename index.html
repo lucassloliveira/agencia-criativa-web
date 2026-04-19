@@ -6,7 +6,7 @@
     <meta name="description" content="Uma página web moderna, atrativa e totalmente adaptável a diferentes tipos de tela, desenvolvida como projeto prático do curso de front-end EBAC. ">
     <title>Agência Criativa Web</title>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="css/estilos.css">
     <style>
         html {
             scroll-behavior: smooth;
@@ -134,50 +134,54 @@
     <!-- ===================
         DEPOIMENTOS
     =================== -->
-    <section id="depoimentos" class="depoimentos secao">
-        <h2 class="secao__titulo secao__titulo--centralizado">Depoimentos</h2>
-        <blockquote class="depoimento__card">
-            <p class="depoimento__texto">“A Agência Criativa Web superou todas as nossas expectativas! O novo site ficou moderno, rápido e alinhado com a identidade da nossa marca. Sem dúvida, foi um grande diferencial para atrair mais clientes.”</p>
-            <cite class="depoimento__autor">Mariana Souza – Gerente de Marketing, NovaTech Soluções</cite>
-        </blockquote>
+    <section id="depoimentos" class="depoimento secao">
+        <div class="depoimento__grid">
+            <h2 class="secao__titulo secao__titulo--centralizado">Depoimentos</h2>
+            <blockquote class="depoimento__card">
+                <p class="depoimento__texto">“A Agência Criativa Web superou todas as nossas expectativas! O novo site ficou moderno, rápido e alinhado com a identidade da nossa marca. Sem dúvida, foi um grande diferencial para atrair mais clientes.”</p>
+                <cite class="depoimento__autor">Mariana Souza – Gerente de Marketing, NovaTech Soluções</cite>
+            </blockquote>
 
-        <blockquote class="depoimento__card">
-            <p class="depoimento__texto">“Profissionalismo e criatividade definem essa equipe. Desde o branding até o desenvolvimento do nosso site, tudo foi feito com muita qualidade e atenção aos detalhes. Recomendo fortemente!”</p>
-            <cite class="depoimento__autor">Carlos Mendes – CEO, Mendes Consultoria Empresarial</cite>
-        </blockquote>
+            <blockquote class="depoimento__card">
+                <p class="depoimento__texto">“Profissionalismo e criatividade definem essa equipe. Desde o branding até o desenvolvimento do nosso site, tudo foi feito com muita qualidade e atenção aos detalhes. Recomendo fortemente!”</p>
+                <cite class="depoimento__autor">Carlos Mendes – CEO, Mendes Consultoria Empresarial</cite>
+            </blockquote>
 
-        <blockquote class="depoimento__card">
-            <p class="depoimento__texto">“Trabalhar com a Agência Criativa Web foi uma experiência incrível. Eles entenderam perfeitamente nossas necessidades e entregaram soluções que realmente trouxeram resultados para o nosso negócio.”</p>
-            <cite class="depoimento__autor">Juliana Ribeiro – Diretora Comercial, Horizonte Digital</cite>
-        </blockquote>
+            <blockquote class="depoimento__card">
+                <p class="depoimento__texto">“Trabalhar com a Agência Criativa Web foi uma experiência incrível. Eles entenderam perfeitamente nossas necessidades e entregaram soluções que realmente trouxeram resultados para o nosso negócio.”</p>
+                <cite class="depoimento__autor">Juliana Ribeiro – Diretora Comercial, Horizonte Digital</cite>
+            </blockquote>
+        </div>    
     </section>
     
     <!-- ===================
         CONTATOS
     =================== -->
     <section id="contatos" class="contatos secao secao--escura">
-        <h2 class="secao__titulo secao__titulo--claro">Contatos</h2>
+        <div class="contatos__inner">
+            <h2 class="secao__titulo secao__titulo--claro">Contatos</h2>
             <div class="contatos__info">
                 <p class="contatos__info__item">Endereço: Rua das Inovações, 245 – Centro, Salvador – BA, CEP 40000-000</p>
                 <p class="contatos__info__item">Telefone: (71) 98765-4321</p>
                 <p class="contatos__info__item">E-mail: contato@agenciacriativaweb.com.br</p>
             </div>
 
-        <form class="contatos__form">
-            <label for="nome" class="contatos__label">Seu nome</label>
-            <input type="text" id="nome" class="contatos__input" name="nome" placeholder="Ex: Maria Silva" required>
+            <form class="contatos__form">
+                <label for="nome" class="contatos__label">Seu nome</label>
+                <input type="text" id="nome" class="contatos__input" name="nome" placeholder="Ex: Maria Silva" required>
 
-            <label for="email" class="contatos__label">E-mail</label>
-            <input type="email" id="email" class="contatos__input" name="email" placeholder="Ex: maria@email.com" required>
+                <label for="email" class="contatos__label">E-mail</label>
+                <input type="email" id="email" class="contatos__input" name="email" placeholder="Ex: maria@email.com" required>
 
-            <label for="telefone" class="contatos__label">Telefone</label>
-            <input type="tel" id="telefone" class="contatos__input" name="telefone" placeholder="(xx) x xxxx-xxxx" required>
+                <label for="telefone" class="contatos__label">Telefone</label>
+                <input type="tel" id="telefone" class="contatos__input" name="telefone" placeholder="(xx) x xxxx-xxxx" required>
 
-            <label for="mensagem" class="contatos__label">Mensagem</label>
-            <textarea id="mensagem" class="contatos__input" name="mensagem" placeholder="Conte um pouco sobre seu projeto..." required></textarea>
+                <label for="mensagem" class="contatos__label">Mensagem</label>
+                <textarea id="mensagem" class="contatos__input" name="mensagem" placeholder="Conte um pouco sobre seu projeto..." required></textarea>
 
-            <button type="submit" class="contatos__btn">Enviar</button>
-        </form>
+                <button type="submit" class="contatos__btn">Enviar</button>
+            </form>
+        </div>
     </section>
 
     <!-- ===================
