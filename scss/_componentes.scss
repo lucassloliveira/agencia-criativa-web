@@ -36,11 +36,16 @@
         flex: 0 0 auto;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: v.$espaco-md;
+        gap: 0.5rem;
 
         @include m.respond(md) {
-            width: auto;
+            flex: 0 0 45%;
+        }
+
+        @include m.respond(lg) {
             flex: 0 0 40%;
+            grid-template-columns: repeat(2, 1fr);
+            gap: v.$espaco-md;
         }
     }
 
@@ -170,12 +175,13 @@
     &__inner {
         display: flex;
         flex-direction: column;
-        gap: v.$espaco-lg;
+        gap: 0.5rem;
 
         @include m.respond(md) {
             flex-direction: row;
             justify-content: space-between;
             align-items: flex-start;
+            gap: v.$espaco-lg
         }
     }
 
@@ -195,11 +201,11 @@
     }
 
     &__form {
-        margin-top: v.$espaco-lg;
         display: flex;
+        flex: 1;
         flex-direction: column;
         gap: v.$espaco-sm;
-        max-width: 600px;
+        max-width: 100%;
     }
 
     &__label {

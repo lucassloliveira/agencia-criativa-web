@@ -5,7 +5,11 @@
    UTILITÁRIOS
 =================== */
 .secao {
-    scroll-margin-top: 4.5rem;
+    scroll-margin-top: 7.5rem;
+
+    @include m.respond(lg) {
+        scroll-margin-top: 4.5rem;
+    }
 
 
     &--escura {
@@ -53,13 +57,32 @@
 }
 
 .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: v.$cor-secundaria;
+    padding: v.$espaco-md;
     transition: all 0.3s ease;
 
+    @include m.respond(lg) {
+      display: flex;
+      position: static;
+      width: auto;
+      padding: 0;
+      background-color: transparent;  
+    }
 
     &__lista {
         display: flex;
+        flex-direction: column;
         list-style-type: none;
         gap: v.$espaco-md;
+
+        @include m.respond(lg) {
+            flex-direction: row;
+        }
     }
 
     &__link {
@@ -67,6 +90,10 @@
         text-decoration: none;
         font-size: 1.5rem;
         font-family: v.$fonte-titulo;
+    }
+
+    &--aberta {
+        display: block;
     }
 }
 
@@ -188,7 +215,7 @@
 }
 
 .hamburger {
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 5px;
     background: none;
@@ -196,6 +223,9 @@
     cursor: pointer;
     padding: 4px;
 
+    @include m.respond(lg) {
+        display: none;
+    }
 
     &__linha {
         display: block;
