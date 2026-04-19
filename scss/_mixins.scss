@@ -1,12 +1,15 @@
 @use 'variaveis' as v;
 @use 'sass:map';
 
+// Estilos base reutilizaveis para botões
 @mixin botao-base {
     padding: 1rem 2rem;
     cursor: pointer;
     font-size: 1rem;
 }
 
+// Define padding responsivo para seções
+// $tamanho: padding mobile | $tamanho2: padding horizontal desktop
 @mixin espacamento-secao($tamanho, $tamanho2) {
     padding: $tamanho;
 
@@ -15,7 +18,7 @@
     }
 }
 
-//* GERA O MEDIA QUERY *//
+// Gera o Media queries a partir do mapa $breakpoints
 @mixin respond($size) {
     @media (min-width: map.get(v.$breakpoints, $size)) {
         @content; 

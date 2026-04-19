@@ -1,17 +1,20 @@
+// Cores principais 
 $cor-primaria: #1a1a1a;
 $cor-secundaria: #f5f4f0;
 $cor-acento: #8B7355;
 $cor-texto: #666;
 $cor-card: #2a2a2a;
 
+// Tipografia
 $fonte-titulo: 'DM Serif Display', serif;
 $fonte-corpo: 'DM Sans', sans-serif;
 
+// Espaçamentos
 $espaco-sm: 1rem;
 $espaco-md: 2rem;
 $espaco-lg: 4rem;
 
-/* map */
+// Breakpoints para uso com mixins respond()
 $breakpoints: (
     sm: 576px,
     md: 768px,
